@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Sign In Page</title>
+
+    <link rel="stylesheet" href="signin.css">
+
+    
+</head>
+<body>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: antiquewhite;
+            color: #339966;
+        }
+
+        .container {
+            background-color: #d9f2e6 ;
+            border-radius: 15px;
+            padding: 40px;height: 400px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .container h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            background: #c6ecd9;
+            color: #339966;
+            font-size: 1rem;
+        }
+
+        .form-group input::placeholder {
+            color: #339966;
+        }
+
+        .form-group input:focus {
+            background: rgba(246, 246, 246, 0.91);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border: solid;
+            border-color: #339966;
+            border-radius: 8px;
+            background: #d9f2e6;
+            color: #339966;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #339966;
+            color: white;
+        }
+
+
+       
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+        }
+    a {
+    width: 100%;
+    background: #c6ecd9;
+    color: #339966;
+    border: solid;
+    border-color: #339966;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+a:hover {
+    background: #339966;
+    color: white;
+    text-decoration: underline;
+}
+
+    </style>
+    <div class="container">
+        <h1>Welcome Back!</h1>
+        <form action="/submit1" method="POST" id="signinform">
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="phone" name="phone" placeholder="phone number" required>
+            </div>
+            <button type="submit1" class="btn">Sign In</button>
+
+        </form>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</body>
+</html>
