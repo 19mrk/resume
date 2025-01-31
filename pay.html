@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+</head>
+<body>
+    <script src="https://js.stripe.com/v3/">
+        async function handleStripePayment() {
+            const amount = 500; // $5.00
+        
+            // Step 1: Create a payment intent
+            const response = await fetch('http://localhost:5000/create-payment-intent', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ amount, currency: 'usd' }),
+            });
+        
+            const { clientSecret } = await response.json();
+        
+            // Step 2: Initialize Stripe
+            const stripe = Stripe('YOUR_STRIPE_PUBLIC_KEY'); // Replace with your Stripe Publishable Key
+        
+            const { error } = await stripe.confirmCardPayment(clientSecret, {
+                payment_method: {
+                    card: {
+                        // Get card details from input fields (if present)
+                    },
+                },
+            });
+        
+            if (error) {
+                alert('Payment failed: ' + error.message);
+            } else {
+                alert('Payment successful!');
+            }
+        }
+        
+    </script>
+
+</body>
+</html>
