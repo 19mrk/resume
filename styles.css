@@ -60,7 +60,7 @@ header nav a:hover {
      background: url('back (3).png');    
      background-position: center;
      background-repeat: no-repeat;
-     background-size: auto;
+     background-size: cover;
 }
 
 
