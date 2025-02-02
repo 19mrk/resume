@@ -1,72 +1,58 @@
 * {
-    margin: 0;
-    padding: 0;
+   
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: cursive;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNDUxLWJnLTA2LmpwZw.jpg');    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    
 }
+
 
 /* Header Styling */
 header {
-    background-color: #336600;
-    color: white;
+    background: #d9f2e6;
+    color: #339966;
     padding: 20px;
-    text-align: center;
+   
     
 }
-.header .button {
-    display: inline-block; /* Ensures the link behaves like a block-level element but fits inline */
-    padding: 10px 10px; /* Add spacing around the text */
-    height: 50px; /* Set a specific height */
-    width: 150px; /* Set a specific width */
-    background-color: #ffcce0; /* Button background color */
-    color: white; /* Text color */
-    text-align: center; /* Center-align the text */
-    text-decoration: none; /* Remove the underline */
-    border-radius: 35px; /* Add rounded corners */
-    border: none; /* Remove any border */
-    font-size: 24px; /* Set font size */
-    font-weight: bold; /* Optional: make text bold */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    transition: background-color 0.3s ease;
-    color: #336600; 
-    align-items: center;
-    margin-bottom: 2px;/* Smooth hover effect */
-  }
-
 header .logo h1 {
     margin-bottom: 10px;
 }
 
-header nav {
-    margin-top: 10px;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-header nav a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
+nav ul li {
+    display: inline;
     margin: 0 15px;
-    font-size: 18px;
-    height: 30px;
-    width: 100px;
-    border-radius: 8px;
-    border-color: #f4f4f4;
-    border-style:solid;
-
 }
 
-header nav a:hover {
+nav ul li a {
+    font-weight: bold;
+    color: #339966;
     text-decoration: underline;
-    background-color: white;
-    color: blue;
-    text-decoration: none;
-    text-shadow: 2px 2px 5px gray;
 }
+
+nav ul li a:hover{
+    background: #339966;
+    color: white;
+    text-shadow: 2px 2px 5px white;
+}
+
 .thank {
     display: inline-block;
     background-color: white;
